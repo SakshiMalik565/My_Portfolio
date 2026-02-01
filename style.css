@@ -168,14 +168,109 @@ ul {
 }
 
 .navbar-logo {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 700;
-  background: var(--gradient-1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.logo-wave {
+  display: inline-block;
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+  font-size: 1.3rem;
+}
+
+.navbar-logo:hover .logo-wave {
+  animation: wave 0.5s infinite;
+}
+
+.logo-text {
+  position: relative;
+  background: linear-gradient(90deg, #a855f7, #6366f1, #22d3ee);
+  background-size: 200% auto;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
-  letter-spacing: -0.5px;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.navbar-logo:hover .logo-text {
+  animation: gradient-shift 1.5s ease infinite;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+.navbar-logo::after {
+  content: '|';
+  position: absolute;
+  right: -12px;
+  color: #a855f7;
+  animation: blink 1s step-end infinite;
+  opacity: 0;
+}
+
+.navbar-logo:hover::after {
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(14deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(14deg);
+  }
+
+  40% {
+    transform: rotate(-4deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  60% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% center;
+  }
+
+  50% {
+    background-position: 100% center;
+  }
+
+  100% {
+    background-position: 0% center;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .navbar-menu {
@@ -1577,4 +1672,34 @@ ul {
 /* Light theme specific navbar adjustment */
 [data-theme="light"] .navbar {
   background: rgba(248, 250, 252, 0.8);
+}
+
+/* Certification Links */
+.cert-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.cert-link .achievement-card {
+  pointer-events: none;
+}
+
+/* Achievement Links (same styling for consistency) */
+.achievement-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.achievement-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
