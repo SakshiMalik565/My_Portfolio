@@ -447,7 +447,7 @@ ul {
 
 .hero-avatar .profile-img {
   width: 180%;
-  height: 140%;
+  height: 180%;
   object-fit: cover;
   object-position: 50% 25%;
 }
@@ -1577,4 +1577,34 @@ ul {
 /* Light theme specific navbar adjustment */
 [data-theme="light"] .navbar {
   background: rgba(248, 250, 252, 0.8);
+}
+
+/* Certification Links */
+.cert-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.cert-link .achievement-card {
+  pointer-events: none;
+}
+
+/* Achievement Links (same styling for consistency) */
+.achievement-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.achievement-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
