@@ -7,7 +7,6 @@
   <meta name="description" content="Contact Sakshi Malik - Get in Touch">
   <title>Contact - Sakshi Malik</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="port_icon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -21,6 +20,18 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
       <div class="navbar-toggle" id="navToggle">
         <span></span>
         <span></span>
@@ -31,118 +42,184 @@
 
   <!-- HERO -->
   <section class="hero hero-small">
-    <div class="hero-content">
-      <h1>Get In Touch</h1>
-      <p>Let's discuss your next project or opportunity</p>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>Let's Connect</span>
+        </div>
+        <h1>Get In <span class="highlight">Touch</span></h1>
+        <p class="hero-description">Have a project in mind? Let's discuss your next opportunity</p>
+      </div>
     </div>
   </section>
 
-  <!-- CONTACT INFO CARDS -->
+  <!-- CONTACT SECTION -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Contact Information</h2>
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="section-header" style="text-align: left; margin-bottom: var(--spacing-lg);">
+            <span class="section-subtitle">Reach Out</span>
+            <h2 class="section-title">Contact Information</h2>
+            <p style="color: var(--text-muted);">Feel free to reach out through any of these channels. I typically
+              respond within 24 hours.</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:sakshimalik565@gmail.com">sakshimalik565@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+917505540092">+91-7505540092</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>Punjab, India<br>Lovely Professional University</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">💼</div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p><a href="https://www.linkedin.com/in/sakshi-malik-285v/"
+                  target="_blank">linkedin.com/in/sakshi-malik-285v</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">🐙</div>
+            <div>
+              <h4>GitHub</h4>
+              <p><a href="https://github.com/SakshiMalik565" target="_blank">github.com/SakshiMalik565</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm">
+          <h3 style="margin-bottom: var(--spacing-lg);">Send Me a Message</h3>
+          <div id="formMessage" class="form-message"></div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91-XXXXXXXXXX">
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select a topic</option>
+                <option value="job">Job Opportunity</option>
+                <option value="project">Project Collaboration</option>
+                <option value="freelance">Freelance Work</option>
+                <option value="general">General Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" required
+              placeholder="Tell me about your project or how I can help you..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            Send Message
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVAILABILITY SECTION -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Status</span>
+        <h2 class="section-title">Current Availability</h2>
+      </div>
       <div class="cards-grid">
         <div class="card text-center">
-          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">📧</div>
-          <h3 class="card-title">Email</h3>
-          <p class="card-text">
-            <a href="mailto:sakshimalik565@gmail.com" style="color: var(--primary-color);">
-              sakshimalik565@gmail.com
-            </a>
-          </p>
+          <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">✅</div>
+          <h3 class="card-title">Open for Opportunities</h3>
+          <p class="card-text">Currently seeking internships and entry-level positions in software development, data
+            science, and AI/ML.</p>
         </div>
-
         <div class="card text-center">
-          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">📱</div>
-          <h3 class="card-title">Phone</h3>
-          <p class="card-text">
-            <a href="tel:+917505540092" style="color: var(--primary-color);">
-              +91-7505540092
-            </a>
-          </p>
+          <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">🤝</div>
+          <h3 class="card-title">Open for Collaboration</h3>
+          <p class="card-text">Interested in working on open-source projects and innovative tech solutions with
+            like-minded developers.</p>
         </div>
-
         <div class="card text-center">
-          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">📍</div>
-          <h3 class="card-title">Location</h3>
-          <p class="card-text">
-            Punjab, India<br>
-            Lovely Professional University
-          </p>
+          <div style="font-size: 3rem; margin-bottom: var(--spacing-sm);">💡</div>
+          <h3 class="card-title">Open for Learning</h3>
+          <p class="card-text">Always excited to learn new technologies and contribute to meaningful projects that make
+            a difference.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT FORM -->
-  <section class="section bg-light">
-    <div class="container">
-      <h2 class="section-title">Send Me a Message</h2>
-      <form class="contact-form" id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
-        <div id="formMessage" class="form-message"></div>
-
-        <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" required placeholder="Enter your full name">
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" required placeholder="Enter your email address">
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (optional)">
-        </div>
-
-        <div class="form-group">
-          <label for="subject">Subject *</label>
-          <select id="subject" name="subject" required>
-            <option value="">Select a subject</option>
-            <option value="project">Project Inquiry</option>
-            <option value="job">Job Opportunity</option>
-            <option value="collaboration">Collaboration</option>
-            <option value="general">General Question</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- CONNECT SECTION -->
+  <!-- FAQ SECTION -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Connect With Me</h2>
-      <div class="cards-grid">
-        <a href="https://www.linkedin.com/in/sakshi-malik-285v/" target="_blank" class="card text-center"
-          style="text-decoration: none;">
-          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">💼</div>
-          <h3 class="card-title">LinkedIn</h3>
-          <p class="card-text">Connect with me professionally</p>
-        </a>
-
-        <a href="https://github.com/SakshiMalik565" target="_blank" class="card text-center"
-          style="text-decoration: none;">
-          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">💻</div>
-          <h3 class="card-title">GitHub</h3>
-          <p class="card-text">Check out my code and projects</p>
-        </a>
-
-        <a href="https://www.hackerrank.com/profile/sakshimalik565" target="_blank" class="card text-center"
-          style="text-decoration: none;">
-          <div style="font-size: 2.5rem; margin-bottom: var(--spacing-sm);">🏆</div>
-          <h3 class="card-title">HackerRank</h3>
-          <p class="card-text">View my coding achievements</p>
-        </a>
+      <div class="section-header">
+        <span class="section-subtitle">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <div class="card" style="margin-bottom: var(--spacing-md);">
+          <h4 style="color: var(--primary); margin-bottom: var(--spacing-xs);">What type of work are you looking for?
+          </h4>
+          <p class="card-text">I'm interested in full-time positions, internships, and freelance opportunities in web
+            development, mobile app development, data science, and AI/ML domains.</p>
+        </div>
+        <div class="card" style="margin-bottom: var(--spacing-md);">
+          <h4 style="color: var(--primary); margin-bottom: var(--spacing-xs);">What is your preferred mode of work?</h4>
+          <p class="card-text">I'm flexible and open to both remote and on-site opportunities. I have experience working
+            effectively in virtual team environments.</p>
+        </div>
+        <div class="card" style="margin-bottom: var(--spacing-md);">
+          <h4 style="color: var(--primary); margin-bottom: var(--spacing-xs);">How quickly do you respond?</h4>
+          <p class="card-text">I typically respond to messages within 24 hours. For urgent matters, feel free to reach
+            out via phone.</p>
+        </div>
+        <div class="card">
+          <h4 style="color: var(--primary); margin-bottom: var(--spacing-xs);">Do you take on freelance projects?</h4>
+          <p class="card-text">Yes! I'm open to freelance web development, data analysis, and mobile app development
+            projects. Let's discuss your requirements.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -170,8 +247,8 @@
           </svg>
         </a>
       </div>
-      <p>&copy; 2026 Sakshi Malik. All rights reserved.</p>
-      <p class="footer-info">Built with HTML & CSS | Mobile: +91-7505540092</p>
+      <p>© 2026 Sakshi Malik. Crafted with passion.</p>
+      <p class="footer-info">+91-7505540092 • Punjab, India</p>
     </div>
   </footer>
 

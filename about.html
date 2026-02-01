@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="About Sakshi Malik - Education, Training & Achievements ">
+  <meta name="description" content="About Sakshi Malik - Education, Training & Achievements">
   <title>About - Sakshi Malik</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="port_icon.png" type="image/x-icon">
 </head>
 
 <body>
@@ -21,6 +20,18 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+        <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <circle cx="12" cy="12" r="5" />
+          <path
+            d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+        </svg>
+        <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+        </svg>
+      </button>
       <div class="navbar-toggle" id="navToggle">
         <span></span>
         <span></span>
@@ -31,26 +42,34 @@
 
   <!-- HERO -->
   <section class="hero hero-small">
-    <div class="hero-content">
-      <h1>About Me</h1>
-      <p>Passionate Computer Science Student & Developer</p>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>Get to know me</span>
+        </div>
+        <h1>About <span class="highlight">Me</span></h1>
+        <p class="hero-description">Passionate Computer Science Student & Developer</p>
+      </div>
     </div>
   </section>
 
   <!-- ABOUT CONTENT -->
   <section class="section">
     <div class="container">
-      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <div class="section-header">
+        <span class="section-subtitle">My Story</span>
         <h2 class="section-title">Who I Am</h2>
-        <p style="font-size: 1.1rem; color: var(--text-gray); line-height: 1.8;">
+      </div>
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.9; margin-bottom: var(--spacing-md);">
           I'm a Computer Science and Engineering student at Lovely Professional University with a passion for full-stack
           development, data analysis, and AI technologies. With expertise in multiple programming languages and
           frameworks, I love building innovative solutions that solve real-world problems.
         </p>
-        <p style="font-size: 1.1rem; color: var(--text-gray); line-height: 1.8; margin-top: var(--spacing-md);">
+        <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.9;">
           My journey in tech has been driven by curiosity and a commitment to continuous learning. From developing
           AI-powered applications to analyzing complex datasets, I thrive on challenges that push me to grow as a
-          developer.
+          developer. I believe in writing clean, efficient code and creating user experiences that make a difference.
         </p>
       </div>
     </div>
@@ -59,45 +78,66 @@
   <!-- EDUCATION SECTION -->
   <section class="section bg-light">
     <div class="container">
-      <h2 class="section-title">Education</h2>
+      <div class="section-header">
+        <span class="section-subtitle">Academic Journey</span>
+        <h2 class="section-title">Education</h2>
+      </div>
       <div class="cards-grid">
         <div class="card">
-          <h3 class="card-title">Bachelor of Technology</h3>
-          <p style="color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-sm);">
-            Computer Science and Engineering
-          </p>
-          <p class="card-text">
-            <strong>Lovely Professional University</strong><br>
-            Punjab, India<br>
-            CGPA: 7.72<br>
-            Aug 2023 - Present
-          </p>
+          <div style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+            <div
+              style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: rgba(0, 212, 255, 0.1); border-radius: var(--radius-md); font-size: 1.5rem; flex-shrink: 0;">
+              🎓</div>
+            <div>
+              <h3 class="card-title">Bachelor of Technology</h3>
+              <p style="color: var(--primary); font-weight: 600; margin-bottom: var(--spacing-xs);">
+                Computer Science and Engineering
+              </p>
+              <p class="card-text">
+                <strong style="color: var(--text-light);">Lovely Professional University</strong><br>
+                Punjab, India • CGPA: 7.72<br>
+                <span style="font-size: 0.85rem;">Aug 2023 - Present</span>
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="card">
-          <h3 class="card-title">Intermediate (12th)</h3>
-          <p style="color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-sm);">
-            Science Stream
-          </p>
-          <p class="card-text">
-            <strong>Police Modern School</strong><br>
-            Meerut, Uttar Pradesh<br>
-            Percentage: 82%<br>
-            Apr 2021 - Mar 2022
-          </p>
+          <div style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+            <div
+              style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: rgba(124, 58, 237, 0.1); border-radius: var(--radius-md); font-size: 1.5rem; flex-shrink: 0;">
+              📚</div>
+            <div>
+              <h3 class="card-title">Intermediate (12th)</h3>
+              <p style="color: var(--secondary); font-weight: 600; margin-bottom: var(--spacing-xs);">
+                Science Stream
+              </p>
+              <p class="card-text">
+                <strong style="color: var(--text-light);">Police Modern School</strong><br>
+                Meerut, Uttar Pradesh • 82%<br>
+                <span style="font-size: 0.85rem;">Apr 2021 - Mar 2022</span>
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="card">
-          <h3 class="card-title">Matriculation (10th)</h3>
-          <p style="color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-sm);">
-            Secondary Education
-          </p>
-          <p class="card-text">
-            <strong>Police Modern School</strong><br>
-            Meerut, Uttar Pradesh<br>
-            Percentage: 94.6%<br>
-            Apr 2022 - Mar 2023
-          </p>
+          <div style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+            <div
+              style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: rgba(244, 114, 182, 0.1); border-radius: var(--radius-md); font-size: 1.5rem; flex-shrink: 0;">
+              🏫</div>
+            <div>
+              <h3 class="card-title">Matriculation (10th)</h3>
+              <p style="color: var(--accent); font-weight: 600; margin-bottom: var(--spacing-xs);">
+                Secondary Education
+              </p>
+              <p class="card-text">
+                <strong style="color: var(--text-light);">Police Modern School</strong><br>
+                Meerut, Uttar Pradesh • 94.6%<br>
+                <span style="font-size: 0.85rem;">Apr 2022 - Mar 2023</span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -106,76 +146,131 @@
   <!-- TRAINING SECTION -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Training & Experience</h2>
+      <div class="section-header">
+        <span class="section-subtitle">Hands-on Experience</span>
+        <h2 class="section-title">Training & Internships</h2>
+      </div>
       <div class="cards-grid">
         <div class="card">
-          <h3 class="card-title">Full Stack Development</h3>
-          <p style="color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-sm);">
-            Bharat Intern | Mar 2024 - Apr 2024
-          </p>
-          <p class="card-text">
-            Developed a content management tool with user authentication. Built backend in Python with Flask and created
-            responsive frontend using HTML, CSS, and JavaScript.
-          </p>
+          <div style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+            <div
+              style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: rgba(0, 212, 255, 0.1); border-radius: var(--radius-md); font-size: 1.5rem; flex-shrink: 0;">
+              📱</div>
+            <div>
+              <h3 class="card-title">Android App Development</h3>
+              <p style="color: var(--primary); font-weight: 600; margin-bottom: var(--spacing-xs);">
+                Bharat Intern (Virtual)
+              </p>
+              <p class="card-text">
+                Developed Android applications using Kotlin and Android Studio with Firebase integration for real-time
+                data management.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="card">
-          <h3 class="card-title">Android Development</h3>
-          <p style="color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-sm);">
-            CodeAlpha | Feb 2025 - Mar 2025
-          </p>
-          <p class="card-text">
-            Built Flashcard Quiz App in Kotlin with Firebase backend for data storage and retrieval. Created
-            user-friendly UI with smooth navigation.
-          </p>
+          <div style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+            <div
+              style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: rgba(124, 58, 237, 0.1); border-radius: var(--radius-md); font-size: 1.5rem; flex-shrink: 0;">
+              🌐</div>
+            <div>
+              <h3 class="card-title">Web Development</h3>
+              <p style="color: var(--secondary); font-weight: 600; margin-bottom: var(--spacing-xs);">
+                Oasis Infobyte (Virtual)
+              </p>
+              <p class="card-text">
+                Built responsive web applications focusing on front-end technologies, user experience, and modern
+                design principles.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="card">
-          <h3 class="card-title">Data Science Workshop</h3>
-          <p style="color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-sm);">
-            LPU | Ongoing
-          </p>
-          <p class="card-text">
-            Participating in hands-on workshops covering machine learning, data visualization, and statistical analysis
-            using Python.
-          </p>
+          <div style="display: flex; align-items: flex-start; gap: var(--spacing-md);">
+            <div
+              style="width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; background: rgba(244, 114, 182, 0.1); border-radius: var(--radius-md); font-size: 1.5rem; flex-shrink: 0;">
+              📊</div>
+            <div>
+              <h3 class="card-title">Data Analytics</h3>
+              <p style="color: var(--accent); font-weight: 600; margin-bottom: var(--spacing-xs);">
+                Accenture (Forage)
+              </p>
+              <p class="card-text">
+                Analyzed datasets, created visualizations, and derived business insights using analytical tools and
+                methodologies.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
+  <!-- CERTIFICATIONS SECTION -->
   <section class="section bg-light">
     <div class="container">
-      <h2 class="section-title">Certifications</h2>
-      <div class="cards-grid">
-        <div class="card">
-          <h3 class="card-title">📊 Data Visualization</h3>
-          <p class="card-text"><strong>TATA</strong> - Forage Virtual Experience</p>
+      <div class="section-header">
+        <span class="section-subtitle">Credentials</span>
+        <h2 class="section-title">Certifications</h2>
+      </div>
+      <div class="skills-bento">
+        <div class="skill-card">
+          <div class="skill-icon">📈</div>
+          <h4>Data Visualization</h4>
+          <p>TATA Group - Empowering Business with Effective Insights</p>
         </div>
-        <div class="card">
-          <h3 class="card-title">📈 Data Analytics</h3>
-          <p class="card-text"><strong>Deloitte</strong> - Forage Virtual Experience</p>
+        <div class="skill-card">
+          <div class="skill-icon">🔍</div>
+          <h4>Data Analytics</h4>
+          <p>Deloitte (Forage) - Technology Consulting Virtual Program</p>
         </div>
-        <div class="card">
-          <h3 class="card-title">🤖 Master Generative AI</h3>
-          <p class="card-text"><strong>Infosys Springboard</strong></p>
+        <div class="skill-card">
+          <div class="skill-icon">🤖</div>
+          <h4>Generative AI</h4>
+          <p>Infosys Springboard - Master Generative AI</p>
         </div>
-        <div class="card">
-          <h3 class="card-title">☁️ Cloud Computing</h3>
-          <p class="card-text"><strong>NPTEL</strong> - IIT Kharagpur</p>
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <h4>Cloud Computing</h4>
+          <p>NPTEL IIT Kharagpur - Cloud Computing Fundamentals</p>
         </div>
-        <div class="card">
-          <h3 class="card-title">🌐 Computer Communications</h3>
-          <p class="card-text"><strong>Coursera</strong> - University of Colorado</p>
+        <div class="skill-card">
+          <div class="skill-icon">🔐</div>
+          <h4>Cybersecurity</h4>
+          <p>Cisco - Introduction to Cybersecurity</p>
         </div>
-        <div class="card">
-          <h3 class="card-title">⭐ HackerRank Gold Badges</h3>
-          <p class="card-text">Python, Statistics, 30 Days of Code</p>
+        <div class="skill-card">
+          <div class="skill-icon">🐍</div>
+          <h4>Python</h4>
+          <p>HackerRank - 5 Star Rating & Gold Badge</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📡</div>
+          <h4>Networking</h4>
+          <p>Coursera - Computer Communications</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h4>Statistics</h4>
+          <p>HackerRank - 5 Star Rating & Gold Badge</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- CTA SECTION -->
+  <div class="cta-section">
+    <div class="cta-content">
+      <h2>Want to Know More?</h2>
+      <p>Check out my projects or get in touch to discuss potential collaborations.</p>
+      <div style="display: flex; gap: var(--spacing-md); justify-content: center; flex-wrap: wrap;">
+        <a href="projects.html" class="btn btn-primary">View Projects</a>
+        <a href="contact.html" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -200,8 +295,8 @@
           </svg>
         </a>
       </div>
-      <p>&copy; 2026 Sakshi Malik. All rights reserved.</p>
-      <p class="footer-info">Built with HTML & CSS | Mobile: +91-7505540092</p>
+      <p>© 2026 Sakshi Malik. Crafted with passion.</p>
+      <p class="footer-info">+91-7505540092 • Punjab, India</p>
     </div>
   </footer>
 
