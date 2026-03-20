@@ -332,7 +332,7 @@ const Hero = ({ setActive }) => {
             </div>
           </div>
           <div className="hero-card glass">
-            <div className="hero-avatar"><img src="/profile2.jpg" alt="Sakshi Malik" /></div>
+            <div className="hero-avatar"><img src="/profile.jpeg" alt="Sakshi Malik" /></div>
             <h3>Sakshi Malik</h3>
             <p style={{ color: 'var(--text-secondary)', marginTop: '0.25rem' }}>B.Tech CSE Student at LPU</p>
             <div className="hero-tags">
